@@ -4,7 +4,7 @@
 #
 Name     : parallel
 Version  : 20160522
-Release  : 1
+Release  : 2
 URL      : http://ftp.gnu.org/gnu/parallel/parallel-20160522.tar.bz2
 Source0  : http://ftp.gnu.org/gnu/parallel/parallel-20160522.tar.bz2
 Summary  : No detailed summary available
@@ -55,14 +55,14 @@ rm -rf %{buildroot}
 
 %files bin
 %defattr(-,root,root,-)
+%exclude /usr/bin/env_parallel.csh
+%exclude /usr/bin/env_parallel.fish
+%exclude /usr/bin/env_parallel.ksh
+%exclude /usr/bin/env_parallel.pdksh
+%exclude /usr/bin/env_parallel.tcsh
+%exclude /usr/bin/env_parallel.zsh
 /usr/bin/env_parallel
 /usr/bin/env_parallel.bash
-/usr/bin/env_parallel.csh
-/usr/bin/env_parallel.fish
-/usr/bin/env_parallel.ksh
-/usr/bin/env_parallel.pdksh
-/usr/bin/env_parallel.tcsh
-/usr/bin/env_parallel.zsh
 /usr/bin/niceload
 /usr/bin/parallel
 /usr/bin/sem
