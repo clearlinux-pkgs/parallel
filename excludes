@@ -1,2 +1,8 @@
 # This file contains the output files that need %exclude. Full path
 # names, one per line.
+/usr/bin/env_parallel.csh
+/usr/bin/env_parallel.fish
+/usr/bin/env_parallel.ksh
+/usr/bin/env_parallel.pdksh
+/usr/bin/env_parallel.tcsh
+/usr/bin/env_parallel.zsh
