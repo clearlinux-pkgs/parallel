@@ -1,14 +1,220 @@
+20170222
+
+* env_parallel now supports /bin/sh, ash, dash.
+
+* --tee will pipe all data to all jobs. Used with --pipe/--pipepart
+  and :::. Small example: seq 3333 | parallel --pipe --tee --tag 'grep
+  {} | wc -l' ::: {0..9}
+
+* If --results {replstr} ends in /: save in dir. Otherwise save as
+  file. Example: parallel --results {} echo {} ::: a b c
+
+* Vote for GNU Parallel's community ads on
+  http://meta.unix.stackexchange.com/a/4356/2972
+  http://meta.askubuntu.com/a/16750/22307
+  http://meta.serverfault.com/a/9040/45704
+
+* GNU Parallel was cited in: Low-delay forwarding with multiple
+  candidates for VANETs using multi-criteria decision making
+  http://ieeexplore.ieee.org/document/7835961/
+
+* GNU Parallel was cited in: An Integrated Simulator and Dataset that
+  Combines Grasping and Vision for Deep Learning
+  https://arxiv.org/pdf/1702.02103.pdf
+
+* GNU Parallel was cited in: A Bayesian model selection approach for
+  identifying differentially expressed transcripts from RNA sequencing
+  data http://onlinelibrary.wiley.com/doi/10.1111/rssc.12213/full
+
+* GNU Parallel was cited in: The impact of copy number variation on
+  gout, and the apple genome
+  https://ourarchive.otago.ac.nz/bitstream/handle/10523/7060/BoocockJames2016MSc.pdf?sequence=3
+
+* GNU Parallel was cited in: Determination of crystal structures of
+  proteins of unknown identity using a marathon molecular replacement
+  procedure: structure of Stenotrophomonas maltophilia
+  phosphate-binding protein
+  https://www.researchgate.net/publication/308186413_Determination_of_crystal_structures_of_proteins_of_unknown_identity_using_a_marathon_molecular_replacement_procedure_Structure_of_Stenotrophomonas_maltophilia_phosphate-binding_protein
+
+* GNU Parallel was cited in: Reaction rates for reaction-diffusion
+  kinetics on unstructured meshes
+  http://aip.scitation.org/doi/10.1063/1.4975167
+
+* GNU Parallel was cited in: Modeling prediction error improves power
+  of transcriptome-wide association studies
+  http://biorxiv.org/content/biorxiv/early/2017/02/14/108316.full.pdf
+
+* GNU Parallel was cited in: Proper experimental design requires
+  randomization/balancing of molecular ecology experiments
+  http://biorxiv.org/content/biorxiv/early/2017/02/17/109280.full.pdf
+
+* GNU Parallel was cited in: Experiment-based thermal micromagnetic
+  simulations of the magnetization reversal for ns-range clocked
+  nanomagnetic logic
+  http://aip.scitation.org/doi/full/10.1063/1.4974021
+
+* GNU Parallel was cited in: The University of Edinburgh’s systems
+  submission to the MT task at IWSLT
+  http://workshop2016.iwslt.org/downloads/IWSLT_2016_paper_27.pdf
+
+* Fast-GBS uses GNU Parallel: https://bitbucket.org/jerlar73/fast-gbs
+
+* Job: DevOps Engineer/Senior Systems Administrator in New York, New
+  York
+  http://rockefeller.jobs/new-york-ny/devops-engineersenior-systems-administrator/2DB3408EAC9E4617AD238550F31C7641/job/
+
+* Training in GNU Parallel:
+  https://www.carc.unm.edu/education-outreach/workshops--training/
+
+* Training in GNU Parallel:
+  http://www.hpc.lsu.edu/training/registration.php?topic=Parallel%20Serial%20Jobs%20Using%20GNU%20Parallel&date=February%2022,%202017&time=9:00%20AM%20-%2011:00%20AM&place=307%20Frey&deadline=2017-02-21%2016:30:00
+
+* Batch Convert Images from PNG to JPEG
+  http://coreygoldberg.blogspot.dk/2017/02/batch-convert-images-from-png-to-jpeg.html
+
+* Accelerating Oxford Nanopore Basecalling
+  http://fowlerlab.org/2017/01/26/accelerating-oxford-nanopore-basecalling/
+
+* parallel и imagemagick в loop на bash
+  https://www.linux.org.ru/forum/development/13190247
+
+* Bug fixes and man page updates.
+
+
+20170206alpha
+
+* --tee introduced.
+
+
+20170122
+
+* sql now uses a temporary credentials file for MySQL to avoid
+  warning.
+
+* --sqlmaster and --sqlworker have been reworked.
+
+* --sqlworker only reads from the DBURL: any command and any arguments
+  are ignored.
+
+* --sqlmaster +DBURL will append different commands to the DBURL and
+  not erase the table.
+
+* If --results contain a replacement string, no tree structure with
+  args will be generated.
+
+* --fg --tmux or --fg --tmuxpane will connect to the tmux.
+
+* GNU Parallel was cited in: Fast, Automated Indoor Light Detection,
+  Classification, and Measurement
+  https://www2.eecs.berkeley.edu/Pubs/TechRpts/2016/EECS-2016-212.pdf
+
+* GNU Parallel was cited in: Unbiased RNA Shotgun Metagenomics in
+  Social and Solitary Wild Bees Detects Associations with Eukaryote
+  Parasites and New Viruses
+  http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0168456
+
+* GNU Parallel was cited in: Almost Event-Rate Independent Monitoring
+  of Metric Temporal Logic
+  http://people.inf.ethz.ch/trayteld/papers/tacas17-aerial/aerial.pdf
+
+* 使用GNU parallel命令并行预处理数据: https://blog.razrlele.com/p/1843
+
+* GNU Parallel as a queuing system:
+  http://puntoblogspot.blogspot.com/2017/01/gnu-parallel-as-queuing-system.html
+
+* AWS re:Invent 2016: Deep Dive on Amazon Elastic File System (STG202)
+  slide 45
+  http://www.slideshare.net/AmazonWebServices/aws-reinvent-2016-deep-dive-on-amazon-elastic-file-system-stg202
+  and https://youtu.be/PlTuJx4VnGw?t=30m16s
+
+* Bug fixes and man page updates.
+
+
+20161222
+
+* --results foo.csv will save output as a CSV-file. Can be directly
+  imported into R or LibreCalc.
+
+* When using --pipepart a negative --block-size is not interpreted as
+  a block size but as the number of blocks each jobslot should have.
+
+* --sqlmaster/--sqlandworker will append jobs to the DBURL if the
+  DBURL is prepended with +.
+
+* GNU Parallel was cited in: A cloud-based workflow to quantify
+  transcript-expression levels in public cancer compendia
+  http://www.nature.com/articles/srep39259
+
+* GNU Parallel was cited in: Learning string distance with smoothing
+  for OCR spelling correction
+  http://paperity.org/p/78557440/learning-string-distance-with-smoothing-for-ocr-spelling-correction
+
+* GNU Parallel was cited in: Transient compute clustering with GNU
+  Parallel and sshfs
+  https://gist.github.com/Brainiarc7/24c966c8a001061ee86cc4bc05826bf4
+
+* GNU Parallel was cited in: Determination of crystal structures of
+  proteins of unknown identity using a marathon molecular replacement
+  procedure: Structure of Stenotrophomonas maltophilia
+  phosphate-binding protein
+  https://www.researchgate.net/publication/308186413_Determination_of_crystal_structures_of_proteins_of_unknown_identity_using_a_marathon_molecular_replacement_procedure_Structure_of_Stenotrophomonas_maltophilia_phosphate-binding_protein
+
+* GNU Parallel was cited in: The Outer Solar System Origins Survey:
+  I. Design and First-Quarter Discoveries
+  https://arxiv.org/pdf/1511.02895v2.pdf
+
+* GNU Parallel was cited in: Large-scale benchmarking reveals false
+  discoveries and count transformation sensitivity in 16S rRNA gene
+  amplicon data analysis methods used in microbiome studies
+  http://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-016-0208-8
+
+* GNU Parallel was cited in: Decomposing Images into Layers via
+  RGB-space Geometry
+  https://cs.gmu.edu/~ygingold/singleimage/Decomposing%20Images%20into%20Layers%20via%20RGB-space%20Geometry%20(Tan%20et%20al%202016%20TOG)%20small.pdf
+
+* 4 Ways to Batch Convert Your PNG to JPG and Vice-Versa
+  http://www.tecmint.com/linux-image-conversion-tools/
+
+* All's Fair in Love and Distributed Storage
+  http://cohesity.com/blog/alls-fair-love-distributed-storage/
+
+* How can I use GNU Parallel to run a lot of commands in parallel
+  https://www.msi.umn.edu/support/faq/how-can-i-use-gnu-parallel-run-lot-commands-parallel
+
+* 정해영의 블로그 - JEONG Haeyoung's blog
+  http://blog.genoglobe.com/2016/11/gnu-parallel.html
+
+* 在Linux下将PNG和JPG批量互转的四种方法
+  http://os.51cto.com/art/201612/524182.htm
+
+* Running in parallel http://tomkimpson.com/howto/gnuparallel/
+
+* Taco Bell Parallel Programming
+  https://giorgos.sealabs.net/taco-bell-parallel-programming.html
+
+* Bug fixes and man page updates.
+
+
 20161122
 
-* --record-env can now be used with env_parallel for bash, ksh, pdksh, and zsh.
+* --record-env can now be used with env_parallel for bash, ksh, pdksh,
+  and zsh.
 
-* GNU Parallel was cited in: An improved implementation of Conditional Reciprocal Best Hits with LAST and Python https://pypi.python.org/pypi/shmlast/1.0.3
+* GNU Parallel was cited in: An improved implementation of Conditional
+  Reciprocal Best Hits with LAST and Python
+  https://pypi.python.org/pypi/shmlast/1.0.3
 
-* GNU Parallel was cited in: miRPathDB: a new dictionary on microRNAs and target pathways http://nar.oxfordjournals.org/content/early/2016/10/13/nar.gkw926.full
+* GNU Parallel was cited in: miRPathDB: a new dictionary on microRNAs
+  and target pathways
+  http://nar.oxfordjournals.org/content/early/2016/10/13/nar.gkw926.full
 
-* GNU/Parallel – Run multiple commands simultaneously https://vinusumi.wordpress.com/2016/11/08/gnuparallel-run-multiple-commands-simultaneously/
+* GNU/Parallel – Run multiple commands simultaneously
+  https://vinusumi.wordpress.com/2016/11/08/gnuparallel-run-multiple-commands-simultaneously/
 
-* Tutorial: Parallel web scraping with CasperJS and GNU Parallel http://g-liu.com/blog/2016/10/tutorial-parallel-web-scraping-with-casperjs-and-gnu-parallel/
+* Tutorial: Parallel web scraping with CasperJS and GNU Parallel
+  http://g-liu.com/blog/2016/10/tutorial-parallel-web-scraping-with-casperjs-and-gnu-parallel/
+
+* Bug fixes and man page updates.
 
 
 20161022
