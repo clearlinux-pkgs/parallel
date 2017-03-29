@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xD1AB451688888888 (ole@tange.dk)
 #
 Name     : parallel
-Version  : 20170222
-Release  : 9
-URL      : http://ftp.gnu.org/gnu/parallel/parallel-20170222.tar.bz2
-Source0  : http://ftp.gnu.org/gnu/parallel/parallel-20170222.tar.bz2
-Source99 : http://ftp.gnu.org/gnu/parallel/parallel-20170222.tar.bz2.sig
+Version  : 20170322
+Release  : 10
+URL      : http://ftp.gnu.org/gnu/parallel/parallel-20170322.tar.bz2
+Source0  : http://ftp.gnu.org/gnu/parallel/parallel-20170322.tar.bz2
+Source99 : http://ftp.gnu.org/gnu/parallel/parallel-20170322.tar.bz2.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GFDL-1.3 GPL-3.0
@@ -37,11 +37,11 @@ doc components for the parallel package.
 
 
 %prep
-%setup -q -n parallel-20170222
+%setup -q -n parallel-20170322
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1490019495
+export SOURCE_DATE_EPOCH=1490793940
 %configure --disable-static
 make V=1  %{?_smp_mflags}
 
@@ -53,7 +53,7 @@ export no_proxy=localhost
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1490019495
+export SOURCE_DATE_EPOCH=1490793940
 rm -rf %{buildroot}
 %make_install
 
