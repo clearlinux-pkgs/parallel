@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# To check the signature run:
+#  echo | gpg
+#  gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve parallel-20170422.tar.bz2.sig
+
+echo | gpg 2>/dev/null
+gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve $0
+exit $?
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQTwBAABCgAGBQJY+8fLAAoJENGrRRaIiIiIVScmoKIt1X33yVxQ3ei9i6hGyAme
+vyWzqiM3ptpznr8366cQh6+kyRwjB+TqDjveD8LhxqyDtExSuxKCzmO5OGQvKX8v
+q1vIvqehpAAusgrxZgkTiimhCWDnB2Bk3GMahzEKlSyp8psmxHvUVHqc9+f7Rgc8
+Ri+XjVcPwWtjsefFNSqGPLFAIKEtqrH9Gpsoq/2aGlr5gtZS9xpCfhh+Rfip3QLw
+3x9ObbFYd2OYQjlgbRrBvfmiGZzdpEizLjg/AX0VxcAQsFvOxF6Bmbq/VrlJh3/5
+yruKoyZUMnF6nmQgW4wEC054RSOOA6Rlxtep8hQbSTgXRxzW/ESgT3BnaqZvbkJd
+DRirTvwPqvHj/kAGoOLhME0nB+pZqaKu99cSYZxIr2UUGRS3FTlXd8VNGtd0R8zE
+grKVSv9xrSExK6Lj0FgmFEpYc3xcCDi5tBnS7ze1WasU13w7sKhK6qs/xMYkWwrj
+loT5VJQNfLpFN/i2HCGFk/1+jis0/tZ9J9rx5Ggp8QBrKKCkWNqrQezgTN+gkJBl
+I0+tskB3xHkKVnr4t+aICxP6idUcz1DhJ0+dTklXs41ns/Z2jYjXwtUtXGIYi4/I
+SRuMnMn33cBRQ4Raqv7CzyuZMQVGaGFMoNu+NV67TnPMy+5rQOShSmAf3r1U7RXA
+dVS6XGhTFDhVXcWLjUreldwfpreywTOq/cndectdeeXEmzABSdekEDvrQzm5wE80
+heG9zp20ghIQcTzoIf5L2boM70OUlYCKwy0ur5Zvy5TrSTj6mH30YQYXVJwZ0KYc
+cG8yaodMHRYKDDOSinWLL09L5sDrWQR2Wk9CnaSuu5MpZWOls77Hq5He72YMFxfx
+PQbJ6xXiIid+vpdCAd+CbGKdvLhdPd3Jo9B0OO1TvFwfiGZc1aNgRfHOiCkVFDj3
+QGWpbassIOWle5ZLfqVRn5JWBOKIBSFJ99ybUdUVGhQ2h9g0mBulSwXL9CSqkueW
+qYhxcZbPixW4PwQut1MXFVkadU9RPDUT91n6ZDLOmez670P8SdScXJzl5ziijPYn
+BXGfXDPYD0zsjr0flwnlLXuK2x/ZnqMF6YcmzmokzcNsiOJrEKBSZACq0tIit/Hi
+2uIYhMw6FNEdLVSBH3d3rilmfyA2lnqJBoqwH0ZIlbSwcV6N1wfZt98vW605iBUF
+wIvTD84zkdzQEAgBelAW5lfvgffju8lOfUFOr45NeqXKOtrOObYj31jgyRuf+9Rn
+rrpgIzrQViyTSpcH+Fve5i4JR7gHc1W8A5i3e0FsH/yO67CJijXj5RNuINQH2Jrh
+X4IFSZ2Kkm8ciy27vSIM65PspieezEDsh1xbZIQE5YGk9E2J0ZR7xGKeymWszD5D
+SLYE2NVFvDPL8dYkTXelqF1b1uJYjppVlSCeOA1RSn2zlS9osSRdDOaBblgfPcq2
+xfS/D3WhILb7SbPXnc9dWcj8nfB4LUhVzWtrEomLa1k02LQ9D825qTDW5C+I5zae
+sFxlqmCW/pnXbxqQUC01MPz77xVwLef9W5V/TCNfZ3olU1MsUDrw7zJP76rm3p4P
+DwpcA3OB1WUel4GTAfkykRPJyktyKCNTgbRfbDz+DB1SmE+0+QxPUAc+fU1TXp0O
+l/j9hdPhEqMcdhPn5kiU5wQ+Rw==
+=MhIO
+-----END PGP SIGNATURE-----

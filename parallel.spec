@@ -5,14 +5,14 @@
 # Source0 file verified with key 0xD1AB451688888888 (ole@tange.dk)
 #
 Name     : parallel
-Version  : 20170322
-Release  : 10
-URL      : http://ftp.gnu.org/gnu/parallel/parallel-20170322.tar.bz2
-Source0  : http://ftp.gnu.org/gnu/parallel/parallel-20170322.tar.bz2
-Source99 : http://ftp.gnu.org/gnu/parallel/parallel-20170322.tar.bz2.sig
+Version  : 20170422
+Release  : 11
+URL      : http://ftp.gnu.org/gnu/parallel/parallel-20170422.tar.bz2
+Source0  : http://ftp.gnu.org/gnu/parallel/parallel-20170422.tar.bz2
+Source99 : http://ftp.gnu.org/gnu/parallel/parallel-20170422.tar.bz2.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
-License  : GFDL-1.3 GPL-3.0
+License  : GPL-3.0
 Requires: parallel-bin
 Requires: parallel-doc
 
@@ -37,11 +37,14 @@ doc components for the parallel package.
 
 
 %prep
-%setup -q -n parallel-20170322
+%setup -q -n parallel-20170422
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1490793940
+export SOURCE_DATE_EPOCH=1492959124
 %configure --disable-static
 make V=1  %{?_smp_mflags}
 
@@ -49,11 +52,11 @@ make V=1  %{?_smp_mflags}
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1490793940
+export SOURCE_DATE_EPOCH=1492959124
 rm -rf %{buildroot}
 %make_install
 
