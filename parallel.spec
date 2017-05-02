@@ -6,7 +6,7 @@
 #
 Name     : parallel
 Version  : 20170422
-Release  : 11
+Release  : 12
 URL      : http://ftp.gnu.org/gnu/parallel/parallel-20170422.tar.bz2
 Source0  : http://ftp.gnu.org/gnu/parallel/parallel-20170422.tar.bz2
 Source99 : http://ftp.gnu.org/gnu/parallel/parallel-20170422.tar.bz2.sig
