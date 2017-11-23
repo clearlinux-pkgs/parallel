@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# To check the signature run:
+#  echo | gpg
+#  gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve parallel-20171122.tar.bz2.sig
+
+echo | gpg 2>/dev/null
+gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve $0
+exit $?
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQTwBAABCgAGBQJaFfVEAAoJENGrRRaIiIiIFMcmn1UpRhb1I9v8hMSmXn1K72lp
+kp2CFP46J+VN3ZJFJorjvYI4Ra397BgH+L5+vq12Fp1KeIrpUMbGdzfEGXco+IFj
+gg/7fXVnbF8CX6qfqMuZGnABncfE3FGNk1MUiD4TPJ/wnnmKUREXgiy3+9WQ8EvK
+ArnJVJWorRwVT0wEHDTjoVgfuWnMDKi1IgwadOUz5KgEdr5tR9H0mz+hy3iAeUxP
+6V4v0phlnJlIG3tB1Rv8B0oWB/afXE7nMKBLleYbPERA9bEBDGsMqWf/ZvxStvZx
+Vju8ae7GUij78cZ0CDFT1pGtIiIvQGAfl7R6KgsfnXG0GOAuEAxxKRFPouMMHXv4
+b+sQIIBjG15gAbvRN82jPEhZgiLDy4XrwkoIo+qyYsbvPOZTPDh+kxcQ6Q8NIX02
+o5FiqsfsTwaSZuAJKHo2plxR10sb0uAGOdYA+f07Ih0qsxNnjvAp4COBbhnIynfb
+utDYc1CtW8oB4EMGaoUUuTZrk9y69pzXCZollK4QGkSFSLVB5O/pl1xbvaHZdPOT
+cOPJ2VS9Zo2HGPu7MS9622vZ05CHx90ArDhFajw1PmOLRMlSsN5p12Sv50qZMnbS
+/lXWTz/VjLjzdEVAVyo8QtKqT3RjiKTlOwzqnTuKRpsqSSsJomdEL8eFQB4c+GSc
+0/gG5lDvT+RrzAOxIXMhB8h3o5xffySggnzYd9uACld0rt9UXgR6M9LEPa/bHsTi
+tw+8k7KNIgrCsA5C+GtP0T4STasyezU7L9k2/JyxyQH/jOPo3fjkYKPrqEPlHWBS
+CFwBlRvHcSbd5jZS32WhXOcdktyhe+O1Z+bFseUcT8cUi1OH3KKngscoO/Zk1YEH
+TeaPBGlyw9N9wlQlGvlF4YLCNsoFazED9PwgOR0Ihxeg0RXjDZxtZFYsNuRn8i0o
+4AdDh7nuKDU+gI1trGOo1ad6fOwP36VralYJKRi0TK2fGKZBr9dxhsQ84tLAyYIN
+5DE1gpsVQdyj1Q8hTwIcRXEdg6UwDliNpM/201zoY/PI0wqzLcZV55OlBOXYZu5I
+iVtpJUzPfTaeoOiWZ8/KzBnJvbvafVU/y1YIQYAS50RWfND9+bimMTwqASXpkycM
+3aDqRr4+FphuxDnajYLu/j9xnBubnqLSsQSK58jNF+V5mQElGIxBa8ngb4dOpxS7
+l9HjHdHtBk5brcDJTwcXfHKnoBwgCTt4OyBl+5wQeDq2OP1G9GtsL7C9voc7JYZL
+S+07751lDjTwcN/sqSkJ6fp4NTu6GlgQIQI/FnmucX2ezXTJCokk52Hkd7AK/NW/
+Y+nOGqNMqKdg/MelaioMwLnf6TAk5zzH6zz+hRimG27/J+FHmWGfHwrjrVfyVpD+
+0zE00FyArhFP+qBd6gNPpLLCdrG2U2gcLNyMG69vxauwTGPyd2D8ThdRxjfl+KIy
+eu54bQCUZkkyVjD1dChRxQfOW5zvjJE7LtQLfNWc4dtn2142LKE25eMOEqBZW0Nx
+kuC3Ax6V7ManoOU0PA3lkc7o48uOM4FWwAVABHO6dj3up7OYGnzBwcfXrSmqI/2u
+8B9rgglaIK/UnuYtehFegduFk+1LMBq4zJNgtAlGaG/ctO8ejysUrs3bo7dZHWMn
+2mLzo0Qcqq6OrdWDX7eA/ttybg==
+=pbZu
+-----END PGP SIGNATURE-----
