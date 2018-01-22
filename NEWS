@@ -1,3 +1,16 @@
+20180122
+
+* bash / 병렬 https://code.i-harness.com/ko/docs/bash/2a1a
+
+* 15分钟神器gnu parallel 入门观止
+  http://www.ezilin.com/2018/01/15gnu-parallel.html
+
+* How To Run Multiple Commands In Parallel on Linux
+  https://www.slashroot.in/how-run-multiple-commands-parallel-linux
+
+* Bug fixes and man page updates.
+
+
 20171222
 
 * env_parset for ash, dash, ksh, sh, zsh
@@ -83,9 +96,6 @@
   http://meta.unix.stackexchange.com/a/4356/2972
   http://meta.askubuntu.com/a/16750/22307
   http://meta.serverfault.com/a/9040/45704
-
-* GNU Parallel was cited in:
-  https://springerplus.springeropen.com/articles/10.1186/s40064-016-2022-y
 
 * Edit images with GNU Parallel and ImageMagick
   https://fedoramagazine.org/edit-images-parallel-imagemagick/
@@ -1478,8 +1488,7 @@ New in this release:
   Substation Cable Installation Problem
   http://i11www.iti.uni-karlsruhe.de/_media/teaching/theses/ma-schmitz-14.pdf
 
-* GNU Parallel was used in: landsat-gifworks
-  https://github.com/KAPPS-/landsat-gifworks
+* GNU Parallel was used in: https://github.com/KAPPS-/landsat-gifworks
 
 * GNU Parallel was used in: https://github.com/exascience/elprep
 
@@ -2390,7 +2399,7 @@ New in this release:
 * --transfer and --basefile support paths relative to the --workdir by
   inserting /./ into the path. 
 
-* GNU Parallel was cited in: 'fastphylo: Fast tools for phylogenetics'
+* GNU Parallel was cited in: fastphylo: Fast tools for phylogenetics
   http://www.biomedcentral.com/1471-2105/14/334/abstract
 
 * Using GNU parallel
