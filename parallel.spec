@@ -6,7 +6,7 @@
 #
 Name     : parallel
 Version  : 20180122
-Release  : 21
+Release  : 22
 URL      : http://ftp.gnu.org/gnu/parallel/parallel-20180122.tar.bz2
 Source0  : http://ftp.gnu.org/gnu/parallel/parallel-20180122.tar.bz2
 Source99 : http://ftp.gnu.org/gnu/parallel/parallel-20180122.tar.bz2.sig
