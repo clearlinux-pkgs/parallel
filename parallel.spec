@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xD1AB451688888888 (ole@tange.dk)
 #
 Name     : parallel
-Version  : 20180122
-Release  : 22
-URL      : http://ftp.gnu.org/gnu/parallel/parallel-20180122.tar.bz2
-Source0  : http://ftp.gnu.org/gnu/parallel/parallel-20180122.tar.bz2
-Source99 : http://ftp.gnu.org/gnu/parallel/parallel-20180122.tar.bz2.sig
+Version  : 20180222
+Release  : 23
+URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20180222.tar.bz2
+Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20180222.tar.bz2
+Source99 : https://mirrors.kernel.org/gnu/parallel/parallel-20180222.tar.bz2.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -37,14 +37,14 @@ doc components for the parallel package.
 
 
 %prep
-%setup -q -n parallel-20180122
+%setup -q -n parallel-20180222
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1516628245
+export SOURCE_DATE_EPOCH=1519338755
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -56,7 +56,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1516628245
+export SOURCE_DATE_EPOCH=1519338755
 rm -rf %{buildroot}
 %make_install
 
@@ -79,6 +79,7 @@ rm -rf %{buildroot}
 /usr/bin/niceload
 /usr/bin/parallel
 /usr/bin/parcat
+/usr/bin/parset
 /usr/bin/sem
 /usr/bin/sql
 
