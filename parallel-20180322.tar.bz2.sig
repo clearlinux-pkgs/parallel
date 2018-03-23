@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# To check the signature run:
+#  echo | gpg
+#  gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve parallel-20180322.tar.bz2.sig
+
+echo | gpg 2>/dev/null
+gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve $0
+exit $?
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQTwBAABCgAGBQJas1//AAoJENGrRRaIiIiIjG8mnRQsfhjNeQjw2i36nHX/VIxY
+uKEMffeZ6qnPj2TTFDuRtVmIt8fl1Xj9O5sObvi4VdetEooVim8RhHdhjwi7DP6q
+fRw/xn26xybpcBCz7H4lyiwIHTwW03VoENJYC5UOFCb2D7jBBFp9rVirki7mD89E
+81YdpFnSEgoon6b5nZ3Rt12cOVplgpjF9MrxWXprT6K/AtAqN8vU7DRYYwfq7uxL
+3zh1BBSmBUk0D4eLEwcMPzL1IXCk8gpuF8PX5hGfJhQKzHsmJ38qM2BLJcwWWPSd
+pvB/L5XdcOgqW6Y8PcuikLGs6I+2aoCY02pRkFWuSoD8dAI9WS4/vZvbXCCHTfZB
+G+fgs2OWyysfMUlJmROXqxz3ve2iki3OLSPn7EWz8jAq8+bf2L4d87kGzsm0LUQU
+MsuE0CqFzwnbRAr7yiG4mgHpI3iUHq7TNPs9RxILfowYE3M1o8mmlx6JQDn1qf96
+aPd7U2jZkWaR/Hxb0GLIyiZotv/HdACn1BeYNj8r3p2VvF1ww8Rit6x5GFjnfExE
+3P/n0T/3bIo/UnsGCoGDQ/jAoFDdbpl05vjK693G0UTDI7CHXPQvfd5/mQagng3Y
+pf3BCmYsOJBpVMqlxra0lbaCNqaZAS/V5Cb8IoClhjTHsFnEJEilLm7Prz5Mrbyd
+PHdnzrW167NUSdcq2wnWNXrJ0La0Khu8P9tX+sNalrPXJ9Bh03bPm+7jYDDSVrJE
+On8WbUZra0GqBS5/eRyUyCEeaiXDUCepFmmNibgUozboS3bijrN8eguIOcrAyht1
+xUUn9yFAN/IREHFLpWhjSQTU/3QoRUw6eBev2UdNU4DRGJS/ezZ396sJTR7AFKwZ
+HyotXPfyHXkkSLC0jK1VW2iNfc3xpKSOm+gt4XVqVvwS8YG9umvdp7uGmr84rFvB
+x1zNvDUF76EzduRkldzngbNKHy4d5dffhPFMixXYKGkmYQeRIQKu9SK7vK8E+tO+
++TPWyYL5kdS/RG05hz/zHUZ2qcGCk/Ht08qkZT4yuLGa3qyxmUyOyXtI/rp1jPtN
+UMV9zdlVPepXE31JnsgnDmgX7OBZDChWmPtHHbDzjXCmJSwvIy7vFKSKmEGeroON
+efmUtnTtRhKRo9WJhbPhrwFWViHc6M394GL0TR2URDypqTSLviLULNizYFzVm4LK
+YcPRKrSmNdKLxcpJ8Ium6qIxB/Qd4zGG2rmvPXLqfxZEV4lXgK1GrdzCfVDGaNeh
+yI56RUe68NEgiF4/FDyU8nfb237dkd0hDNAmQuscQ8PJi8FAyFXOIZiatb3RD6Tk
+mOzeqb28i5/obVWW+E3uGKfmyo/8VeYd4dFFhbi25p0bbv2KpavS0uasw/DqRDXX
+l0hQaYqXWBCLNIrwmcZ+1ITtXVg6j8jZCZfVJXAkm5kkPfQ9AMC/WOImq8d2nzkF
+b+MlLYf0GZxGQd5WUYDAb6qBQuUMi1C2ohF3Ji+qQqOkieau2DxdIrsRU47ZTbJ8
+RBn+Vwn7dkWjUUUEHC+WMKdiN0G7Or0m55pDLHW4oA9cSQS73vpiJuN7kYjwa3gu
+hjxPP0peG4NcCTllDIhc59wd4YS1DeRERJxRzKRQW3ohdJqt1ntPJMgnF+K3F//O
+I+V0B7U1PlG03bU06NDncmzXag==
+=dLT/
+-----END PGP SIGNATURE-----
