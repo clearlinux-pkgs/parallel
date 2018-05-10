@@ -6,7 +6,7 @@
 #
 Name     : parallel
 Version  : 20180422
-Release  : 25
+Release  : 26
 URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20180422.tar.bz2
 Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20180422.tar.bz2
 Source99 : https://mirrors.kernel.org/gnu/parallel/parallel-20180422.tar.bz2.sig
