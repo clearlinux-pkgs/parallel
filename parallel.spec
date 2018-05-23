@@ -5,16 +5,16 @@
 # Source0 file verified with key 0xD1AB451688888888 (ole@tange.dk)
 #
 Name     : parallel
-Version  : 20180422
-Release  : 26
-URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20180422.tar.bz2
-Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20180422.tar.bz2
-Source99 : https://mirrors.kernel.org/gnu/parallel/parallel-20180422.tar.bz2.sig
+Version  : 20180522
+Release  : 27
+URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20180522.tar.bz2
+Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20180522.tar.bz2
+Source99 : https://mirrors.kernel.org/gnu/parallel/parallel-20180522.tar.bz2.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: parallel-bin
-Requires: parallel-doc
+Requires: parallel-man
 
 %description
 Please send problems and feedback to bug-parallel@gnu.org.
@@ -23,6 +23,7 @@ Please send problems and feedback to bug-parallel@gnu.org.
 %package bin
 Summary: bin components for the parallel package.
 Group: Binaries
+Requires: parallel-man
 
 %description bin
 bin components for the parallel package.
@@ -31,20 +32,29 @@ bin components for the parallel package.
 %package doc
 Summary: doc components for the parallel package.
 Group: Documentation
+Requires: parallel-man
 
 %description doc
 doc components for the parallel package.
 
 
+%package man
+Summary: man components for the parallel package.
+Group: Default
+
+%description man
+man components for the parallel package.
+
+
 %prep
-%setup -q -n parallel-20180422
+%setup -q -n parallel-20180522
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1524551601
+export SOURCE_DATE_EPOCH=1527041459
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -56,7 +66,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1524551601
+export SOURCE_DATE_EPOCH=1527041459
 rm -rf %{buildroot}
 %make_install
 
@@ -86,5 +96,17 @@ rm -rf %{buildroot}
 %files doc
 %defattr(-,root,root,-)
 %doc /usr/share/doc/parallel/*
-%doc /usr/share/man/man1/*
-%doc /usr/share/man/man7/*
+
+%files man
+%defattr(-,root,root,-)
+/usr/share/man/man1/env_parallel.1
+/usr/share/man/man1/niceload.1
+/usr/share/man/man1/parallel.1
+/usr/share/man/man1/parcat.1
+/usr/share/man/man1/parset.1
+/usr/share/man/man1/sem.1
+/usr/share/man/man1/sql.1
+/usr/share/man/man7/parallel_alternatives.7
+/usr/share/man/man7/parallel_book.7
+/usr/share/man/man7/parallel_design.7
+/usr/share/man/man7/parallel_tutorial.7
