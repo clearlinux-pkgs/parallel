@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xD1AB451688888888 (ole@tange.dk)
 #
 Name     : parallel
-Version  : 20180722
-Release  : 29
-URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20180722.tar.bz2
-Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20180722.tar.bz2
-Source99 : https://mirrors.kernel.org/gnu/parallel/parallel-20180722.tar.bz2.sig
+Version  : 20180822
+Release  : 30
+URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20180822.tar.bz2
+Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20180822.tar.bz2
+Source99 : https://mirrors.kernel.org/gnu/parallel/parallel-20180822.tar.bz2.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -57,14 +57,14 @@ man components for the parallel package.
 
 
 %prep
-%setup -q -n parallel-20180722
+%setup -q -n parallel-20180822
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532361932
+export SOURCE_DATE_EPOCH=1534984385
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -76,7 +76,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1532361932
+export SOURCE_DATE_EPOCH=1534984385
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/parallel
 cp COPYING %{buildroot}/usr/share/doc/parallel/COPYING

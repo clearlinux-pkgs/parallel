@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# To check the signature run:
+#  echo | gpg
+#  gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve parallel-20180822.tar.bz2.sig
+
+echo | gpg 2>/dev/null
+gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve $0
+exit $?
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQTwBAABCgAGBQJbfeTqAAoJENGrRRaIiIiIh6ImnA5hZr17YOtWuSMoKCMdUTuM
+vcv4xiVqqBOFGdNSEKVr83U7iU3+FidDvNDcK9YB6nPv2AQ1Rj2o90O4xgVtmBw/
+sYYmo/8MiJV0iljd3ydd1Y2A9Hq/6klyam1YLPUzdedy7n8G8DbGTDaCDzrtM3s7
+Hn0LsNOyiZXf1A/piJLLBGnmeHq6Ksq0LqpnWlzvJy0ve0rYG3nBzcJewuNXc2f7
+hB8Oavpkoh+tLuleaxoVYyLanRdyF5dAsqrhcBjhJQgFic4Isnv8QxPYzW3DsZaf
+gxOIYg6BgRxVz61zKuQB3v62NQBWSmI78DkW4VQdmWIJ00X9PXw6Nf3bLmZU2ND1
+ssPzuLM1u8L4+hcRQRyfPMWXfDc5Rgu+HZlqWWt2l8AvJ6YuXDByP8Bqikbbt3hn
+H7dBi+eDen1mEfnyJqhn+V6fINjVQqOP67IK+7jN7Ly7nrB4M9ehPB4f5YiPGdl0
+tx9Xm5bim1tRa2sHemPccxXQGshO3Zb0bloCf8p++LCMWuD8F1pu+0JorayuE9eN
+RRukl6NA6shQRCiJUfyx4muaaGXDC2+wmiBX5DfzUaj3xFH7IXMJvyaPTQ7vNcUS
+zVgCkS3tmUdBBx85UOy9+gP0LOqp3nOe62hYnVbZaWeSnVI4kcZsmYd0cZvCG6zH
+NPYPDI2c5hO48apGm1qojN0NI1ZWCxBgv57vZFhzhl41uDpIObKErNnjiBZxjnfB
+cDGcqCI9jSm7DQO48yN0MghggAeF8/llq20MOysPyw8RM/6wo9PzHpJUjmAa1ArE
+UZEWNa+0EzZpLVJIt9q6DyRo8vjrw1riJqvq2mPf/XWUAk7SoBX27zgABw+urI7c
+K+zkqlrJPyHvBCOnYWEGv6uiNRE51vH8P90dF4X2aK3b2liYG4QpZ2cwJiqTiZWB
+FSrbkomUBJAQ9FTb8yuVs6lQBssq1TufFuU3Rh0+ndSQtZAWxo3tbDAPVXyvMfIn
+MSie4BsNiJsd6ZEPiZlIawPFIviGFUuZ2vezDI9MAX1zpm1ymYwR0hhGnUi6njQ7
+GByTBwWvGLNkXYl3Xq05M2uaVh033x1Ivk0w8bx5Ou5SIt1J7/j0CyMoeAY1Zw5V
+/+mPwYFSXwpt9hnxP1Imx4zvDpYBYxtmoLeAzOIfIztp5g6Pma9DRaof2Eda2kgl
+ckm2Nbgu4PPRSC9lDdlukCKUR9OXUy1AGGVhhjvu0/WelCAkk4Kb+e4GNduk3NSh
+X+Y9MZNow29XMLNaOPbgah0yjQ7jGSXhYHjsPBsNzY/xsPbrAuNiKfvyAmAEYldk
+klLMHV7FfmuUI1fVYbtbnhmE3TsWTr0+20yEMr7j511bfAa5xIwfny+B9pKTnc0q
+B19wWfTIwmpBcTU5S7g2gK5Zo2pq5Fb9OQZid7oxF1QXXMpQK3qV03B0da68fF10
+KkUu9WXcwZGr0uskK/FVKSdUZZA5HiymYdYy1iyA9H+haWqTobvJHa5y84/UTu5M
+XQfU/LntBTekXtqb2HeALgnHWGTSAofV++pDNbhiIPegyCjsAJdBc/ckMkkSyBbf
+dllTbx2BCHcmPw4VYS67m/zUXY6G134zrYjIer+axzWe/oQWYfzEnabyN42PFeez
+wPG8vPpZnQ6Upwwt3oRYoSpKgQ==
+=ZXM3
+-----END PGP SIGNATURE-----

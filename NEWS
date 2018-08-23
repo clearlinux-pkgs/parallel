@@ -1,3 +1,13 @@
+20180822
+
+* parset sets exit code.
+
+* How to install GNU Parallel
+  https://www.techrepublic.com/videos/how-to-install-gnu-parallel/
+
+* Bug fixes and man page updates.
+
+
 20180722
 
 * The quoting engine has been changed. Instead of using \-quoting GNU
@@ -6,7 +16,7 @@
   causing this release to be alpha quality.
 
 * The CPU calculation has changed. By default GNU Parallel uses the
-  number of CPU threads as the number of CPUs. This can be change to
+  number of CPU threads as the number of CPUs. This can be changed to
   the number of CPU cores or number of CPU sockets with
   --use-cores-instead-of-threads or --use-sockets-instead-of-threads.
 
@@ -23,6 +33,8 @@
 
 * Parallel download genomic data with GNU-Parallel
   https://digibio.blogspot.com/search/label/GNU-Parallel
+
+* Bug fixes and man page updates.
 
 
 20180622
