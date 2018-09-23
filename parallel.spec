@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xD1AB451688888888 (ole@tange.dk)
 #
 Name     : parallel
-Version  : 20180822
-Release  : 30
-URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20180822.tar.bz2
-Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20180822.tar.bz2
-Source99 : https://mirrors.kernel.org/gnu/parallel/parallel-20180822.tar.bz2.sig
+Version  : 20180922
+Release  : 31
+URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20180922.tar.bz2
+Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20180922.tar.bz2
+Source99 : https://mirrors.kernel.org/gnu/parallel/parallel-20180922.tar.bz2.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -24,8 +24,8 @@ Please send problems and feedback to bug-parallel@gnu.org.
 %package bin
 Summary: bin components for the parallel package.
 Group: Binaries
-Requires: parallel-license
-Requires: parallel-man
+Requires: parallel-license = %{version}-%{release}
+Requires: parallel-man = %{version}-%{release}
 
 %description bin
 bin components for the parallel package.
@@ -34,7 +34,7 @@ bin components for the parallel package.
 %package doc
 Summary: doc components for the parallel package.
 Group: Documentation
-Requires: parallel-man
+Requires: parallel-man = %{version}-%{release}
 
 %description doc
 doc components for the parallel package.
@@ -57,14 +57,14 @@ man components for the parallel package.
 
 
 %prep
-%setup -q -n parallel-20180822
+%setup -q -n parallel-20180922
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1534984385
+export SOURCE_DATE_EPOCH=1537670423
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -76,7 +76,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1534984385
+export SOURCE_DATE_EPOCH=1537670423
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/parallel
 cp COPYING %{buildroot}/usr/share/doc/parallel/COPYING
