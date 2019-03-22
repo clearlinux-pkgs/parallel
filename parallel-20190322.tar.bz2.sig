@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# To check the signature run:
+#  echo | gpg
+#  gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve parallel-20190322.tar.bz2.sig
+
+echo | gpg 2>/dev/null
+gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve $0
+exit $?
+
+-----BEGIN PGP SIGNATURE-----
+
+iQTwBAABCgAGBQJclAuHAAoJENGrRRaIiIiICBEmn0Fqi3pFFYdAr2jvXXefJzg6
+35KtdW+fbuS2PEBbo70wHcGGZNBHeCtiAr3CDLnBfrKhu6LW/UN6JvR+xt8Wejiq
+mqloJxa1CdPYVRVJR5M09xxqYnbNJyHlDPo+HwvUxt4id9Brg0poGoCx93xieLLT
+jOoIr8aRWpFMGeV2SCQsLxA3gr5aMsQQ3IpKzMB3NzharDAbgqNQ6cETQwyFkdh7
+abh9xZJqU3pFBChDdTLg3e9Egen35Pn4SxYffeObgaJ7Rw3oj+1tUR2rTRJXIOOK
+A6YO7ZHznqdGBFnVxptzR7zSoqTEGIbd4WyKpiqSiGGxiRNxI6gr5nkLXW9HnOjb
+F8Ngp8GueiRRPayDjwhwDQJqz0+zOhSKgKlc8Zm/KS8oCMpXzhNyPnJGddRRhkYK
+lo/8Hhr6uL36Tn5FEJRkaF+CH+72eFQ/ma/cvuDW398T45ole9JLg/aD+CaadPa9
+NgtSznSyTkvwnn5XU0V+LIN/oN4l5lR8YrPS0AMlVAbJxpmFoeZlnWdab/SQXrCT
+6G3flm8ucGgASAUR99Rub8hA6DO1kjOcVQu0xpizUkG8W/17SEl33hDOa5fbmIBM
+zNfeUzbqIwmSpU6ujRkZJX6AcKwba3TG5bddRzh7vJH+K6KliWsZzIowgZ2Bw9sc
+5M0mjAbVTCTPQzuA3S9LZeZQZJ7AvLAxLlZyn7r/3xXtFiMMpuOeANgPeE+VVgWx
+3J67J6RvndMBhk+KHHSwsM+vK7gqtQAIjIDT0C7OEDER/Hg7394yoa3xgEqeKXEr
+gHKC2fTimPNNaxdkwI5AUVr99ATpREyar26AU9i7iTE+GrxrTE8IvYQriPqLoaL7
+5kDfBiSJihewiv4QePCSffxzkLLZOvCY/VSSxL6UEC4UbUTGt6ZuU+3o01B4Voau
+zhE+unhVeEcSznIoty5fMFqrY4hmKbxnDsTiChy/C/A/DJw7spuAuNHr/2fgMXTD
+MKxaNWqsSUlOQFED6Am932/hBLOnZV884YyvI6OXuroNKp/yNLYwhyukYgNsCtW3
+7zQBpx5cDkEKURiP5HuPgzN+fjZVXUQWoim8aWqRWlxz8oh5gnn1ipO32DUCd2An
+P+76WYsK1dgK6hGXIPq2jtguLUtz5t1N+IaF9K3Z1DgdcHgyT73lRcIYqOVBxdVk
+zHXyXS73O70F7/5sbjeO5nAP0sMI8GKUPmFx3XJeTpXonW7JDQrgspjCR28buxEi
+5oKVTQXJ1kXa0249XXMEiK24+bIh9MaIjrAmCHiE7rvdh4RLOzF9gHM/AimaPQXL
+GjVA4UJIA4DBslFbx5mecswF6iPKRMNTPmTRrC27j43SA3ocyUo11gHy+RmT5lkj
++1ylzTMGNBu7M/M7c+iQuT2TM63I4rJth7h+ny0Qs8y5bYVOG6IttAOFCW28sR/J
+q8TwLpaSBZWfkpah4h+REFK7CeFi0wGHUV9xlGyMtKIuHOvIQ5Gb9vYh1tCygpC2
+VSQqfScVPxGlRiRoi+WTijqofUOhV7cdD9LU6/vpve0MpnuLw12/6VnpqxsGV7cI
+fQLtKg4nczOule62sjXIVl4QQzZjmdmc0tCTnwJ3tVEIVubBc8P/FuCJM2OUt3a9
+wbW0NT9+XfS1bDrgjrNvEbo73g==
+=X9m5
+-----END PGP SIGNATURE-----
