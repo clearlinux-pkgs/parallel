@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# To check the signature run:
+#  echo | gpg
+#  gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve parallel-20190422.tar.bz2.sig
+
+echo | gpg 2>/dev/null
+gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve $0
+exit $?
+
+-----BEGIN PGP SIGNATURE-----
+
+iQTwBAABCgAGBQJcvGgGAAoJENGrRRaIiIiIdRcmoMbZNwQGXwGwhotS2BQb4vRo
+n7aXSWujKYsYBSqgI3INlB+0SnhOX6zx475mvcKMtEs/gZyJcWVpHXV3luS1OrAZ
+eIP7y97at5D8pjHLzq492eAIFnZL9EG6sKu/0qUeUMh8AoHXDGOjt6mn6bLmq3aJ
+T+ff0G8q4SPjJFFjlHkPrSOzMY2GT+GVzTKyMDRIX8VUAwuNwJfT7r83gG8qcHJq
+uQG0l7b3FTDLc+ZWxsYOZASDfFv+RJySiVjuJ1PJ9YIU9AD1KDoe1o7tyDe+sdnw
+vrSmYrKhaO+h6JagPZ4/Mt5nFrQj9FeNVV5avV3IuyZ+OlvOxKfW/g62A6A0AYCE
+0LqTJ43djT8bejeIkU6aVAbikChexoG3NtfncQjHljaUtjiBCOrX+DrAZUU1Dton
+FI3DHVFjrirBsLaMg7toqo0DF4U+Mjbb+8YY+KlUflt3islCUTtvfnSjuj7vKfrQ
+/g43hk0lpAVzgLeq2C39nkd/jtbMkfnnwrYF2uXWa73wxz0r6KyoOWZHaUlaPtr4
+d5TNGYWcmsL/DWur+57K9iinIxyL1m3p6WrEd3h1FBQC8ohHniYAXUqKJTKXhII1
+Txz73MuQy+5QXay9UWA7mliTCDWuIeF45CSAClbcKsU99G1cx9VopbWC6K26UEj2
+6p44ExLQl5He5X356Gzjitl7gt8armpilTp91ho6y9Uzl5HEwm9X8kozZIrgeVY5
+5JuSN2qef7gc3cE+i0DfUmhLmvoMt2g9vLQGvk4FHOqNCwqUg2Ty8ut8fuz/ls4T
+iEz+k2eu0VoLPvxdEYtH0SzGcWo4IK3lwAn6Sx6AXPj+/DYQ8wzn1WnU7hmBQVAW
+JWU8B4jNZTlECJNGlZuNq0Rd33PZBHvCpFbh2HN6hAHiw8ai+pT0gkDmZpg0ZvZx
+44nW93sxllFxeewGdQjChZYhr8BeF8GpRukvJhVl3EOOAWw2sX7fHBiGA4G7hN+X
+J/WnojYYvGgnri7VBhcAzOtsH6qmlRaFv/ZHQ69q7R4xRm9gq2INwGTO1GAZCSwl
+QlSZ/5Pxy4e/vPdDaB0xSzlM8B6CYYapXhRsWbA9GyiIqzjgPgon0euM6MJPy0XE
+0alp1YA8Iiixih3AsOdO+5EZ2+sfB+8N59ko/T+YBWgn1WaB5c/6HrbknktI6E1P
+hdy06ZT9HHjYkMxCu97x+2f7pdVzgJsBkQs5ABxh+TQW8H0Sc+vFkcwztNY3xuJc
+Y25HpzayblBgznOyrPZ8OT/dAzfWd5G5rD6iYzx5xbUvOgV/TlBLew0PU+q7zXwP
+M1ggDUnx9vNTdq6rkAFPkY0YrxAtIXJ8nzzSYJtI5ztPraI8o0R2Y6ACRIHncrw5
+ryjp9yTaB1E+KNT73NulPWiQxif8B23bU+ApaeWk8nb9WQLVbeX+XJYAGNUZIlrv
+OgZBRakRJuTLGiHfxfoWoshdIIc7ha5ASVIWorZqBC9l+Y4Rl4IZ23UEWH9yej/I
+eazY9Szx/oPwIR5kOVoC/RcEMDj4Tx5KrtPRqDQfFvodQFoMqjc7cMCsfGgc+W4z
+B3LSkq25cVu8t5CyQS3SnIyEfwp9ongbTXlLgod+CTiRRUZiW5uFXdx3UKHloN0j
+TtsTH8UtXMrBiZF+yXZxHTCt3A==
+=BpkZ
+-----END PGP SIGNATURE-----
