@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# To check the signature run:
+#  echo | gpg
+#  gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve parallel-20190522.tar.bz2.sig
+
+echo | gpg 2>/dev/null
+gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve $0
+exit $?
+
+-----BEGIN PGP SIGNATURE-----
+
+iQTwBAABCgAGBQJc5a00AAoJENGrRRaIiIiIv7EmoKiWvM4m0Vy4lxDhQ4gVqETz
+qQrbvx4LDQPZpqlTHn40T7tt0ezDljf1ocVWhc9Y1Bescu7BzbywnrzCHRcLMYUN
+ESJSQRvG0479N+Uk1V/s17/9m+iJ6qzaVwPigAP4uSFevFryNsAPvrdBcjVXBSDX
+DPO6kNmNG6wBre3Rr9uEzvR0yA/rM9L7UQogzK5K5fDkV5hsu25CDnkrAmvJMPeK
+uf13QUB0o2e6kd58FqWSiRkFCMLZOXqZaatgtuOzeSkITdl7AG9hOh0tpFMR36df
+S03mTN8YnttwVW/91ptdB86W0cD/nSGbMaZN7EImSLRsxOth7gL9yCG1dIhTV22O
+TJtdhuqO9KA5vXRyMQLiKXkApdCuNvWklBzqEhcSzB6DkfjsNJ70oZ7G2i/sSrd0
+3NA4hD5twDraoRENHyJpgZ4e6ILJQHQx5V/uAiJpPS9MraGLgK3T+Gqvvi8c9byO
+Yr7RsGGkccW/HjQycikKWVyvRNsdWmHRDTGcDTS2gR3BK98npD/gL/9vhRqhOJEg
+cMXNWhPushnlp/xMNBRfzxUtnJTCkCSUgZcBgonnF9czjGY8L4mjcEAYaGR8buyb
+Q0BXHso5xQxlSAc1nidF8Ync477G9QlVWdvryRXknKM1/g6Jx3fPAljt8JIA7ha1
++JLsEF/7tLuBkj6V9D32/rWg/yTVhhyiVxCPK7AUZHQbd7oJMzIzYsiz1UWuug3j
+e3R3DD17t+DYcpVmEPUBAh4vs0+oUhIFAs1n7j7xqyxIOlN5IgAM8r2oypLHWl72
+pKpG1lPTDZiKjd+PulJ7XzG/IJkD+g9M9H7e2b4Po83382GRsC+zAXBh7z02MKvE
+0Dy8vZffh1RERrD3EARie3qvtJ4uzmCcUhxoYqGyf0VZJjwneo1UuR07tXGp8V6Q
+p45Y3t8JdfWoMR1bkubCEYfdw7lrn7y/ZJLMjGUrkLKJPiGB4XnYDxJrSFXa3RAk
+mNOd/J1DStiIw3v13Zn3JQ3JOJRuVp77YpymkMhfQusqcAuqeNferGn6Nd+RH3Jt
+1Lv6J53ZJwrw9lQwnd+2Wefa+xWsR/FAtG+FONvjrP0JJrKawJYQcBD9k3WBef8r
+B0jnfiAtE4dXYVqqjQAPN3mVEhMC/NRlDt8w74LZZlfKC2JVSKeWKqAYV3RCOaDK
+1O9aZs+mApJ3hTb9PqOveeEmUE92t4G5PXwwLBfM6bGC0acjPE/7Qos2EodJxKif
+QYzqGrTlXWnV8X8W4lPfpHnNCNSo7h3eogFvyjK2C1hAB9eWitFYD5T9+sHC70Mq
+E6NpDykR/UMWW1OEPKNd9bVBr8SbbhhFfR8DaLO40PKZQmLvsBC6YGxsebSfrEYI
+C7cAq1pPKlbmgl6VxCxAVq2PExdfKkJ/d3cY0Wt4QgcA5XPmR/usWFUYHzTemLRa
+Oa7KnFsFp2D+uoAM+RnFHXiNofbUVOY+5Y29PTn7Xl8H06GPVxwfXvhLYi+i1+tj
+0UqG+1PFtndN4DM0JLAhTHLAdETSVFcBH9HL0pPfvwImrMTmXZXAcCXvWRpkqWiv
+YQpoy+BuXgz1T010ZaE+R3FovWyUojZ5e6HqkSgbOA9FNBKBMp+e1Xh76q0OthQP
+B5497jo9o+/WzJAbIEfhJ0cnpA==
+=Ck7d
+-----END PGP SIGNATURE-----
