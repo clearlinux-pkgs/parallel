@@ -5,12 +5,12 @@
 # Source0 file verified with key 0xD1AB451688888888 (ole@tange.dk)
 #
 Name     : parallel
-Version  : 20191222
-Release  : 46
-URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20191222.tar.bz2
-Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20191222.tar.bz2
-Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20191222.tar.bz2.sig
-Summary  : A shell tool for executing jobs in parallel
+Version  : 20200122
+Release  : 48
+URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20200122.tar.bz2
+Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20200122.tar.bz2
+Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20200122.tar.bz2.sig
+Summary  : Shell tool for executing jobs in parallel
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: parallel-bin = %{version}-%{release}
@@ -18,9 +18,12 @@ Requires: parallel-license = %{version}-%{release}
 Requires: parallel-man = %{version}-%{release}
 
 %description
-GNU Parallel
-https://www.gnu.org/software/parallel/
-= Presentation of GNU Parallel =
+GNU parallel is a shell tool for executing jobs in parallel using one or more
+computers. A job can be a single command or a small script that has to be run
+for each of the lines in the input. The typical input is a list of files, a
+list of hosts, a list of users, a list of URLs, or a list of tables. A job can
+also be a command that reads from a pipe. GNU parallel can then split the input
+and pipe it into commands in parallel.
 
 %package bin
 Summary: bin components for the parallel package.
@@ -57,16 +60,15 @@ man components for the parallel package.
 
 
 %prep
-%setup -q -n parallel-20191222
-cd %{_builddir}/parallel-20191222
+%setup -q -n parallel-20200122
+cd %{_builddir}/parallel-20200122
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1577139438
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1579718732
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
@@ -83,10 +85,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1577139438
+export SOURCE_DATE_EPOCH=1579718732
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/parallel
-cp %{_builddir}/parallel-20191222/COPYING %{buildroot}/usr/share/package-licenses/parallel/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/parallel-20200122/COPYING %{buildroot}/usr/share/package-licenses/parallel/8624bcdae55baeef00cd11d5dfcfa60f68710a02
 %make_install
 ## Remove excluded files
 rm -f %{buildroot}/usr/bin/env_parallel.csh
