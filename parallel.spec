@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xD1AB451688888888 (ole@tange.dk)
 #
 Name     : parallel
-Version  : 20200322
-Release  : 50
-URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20200322.tar.bz2
-Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20200322.tar.bz2
-Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20200322.tar.bz2.sig
+Version  : 20200422
+Release  : 51
+URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20200422.tar.bz2
+Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20200422.tar.bz2
+Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20200422.tar.bz2.sig
 Summary  : Shell tool for executing jobs in parallel
 Group    : Development/Tools
 License  : GPL-3.0
@@ -60,20 +60,19 @@ man components for the parallel package.
 
 
 %prep
-%setup -q -n parallel-20200322
-cd %{_builddir}/parallel-20200322
+%setup -q -n parallel-20200422
+cd %{_builddir}/parallel-20200422
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1584892951
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1587591206
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 %configure --disable-static
 make  %{?_smp_mflags}
@@ -86,10 +85,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1584892951
+export SOURCE_DATE_EPOCH=1587591206
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/parallel
-cp %{_builddir}/parallel-20200322/COPYING %{buildroot}/usr/share/package-licenses/parallel/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/parallel-20200422/COPYING %{buildroot}/usr/share/package-licenses/parallel/8624bcdae55baeef00cd11d5dfcfa60f68710a02
 %make_install
 ## Remove excluded files
 rm -f %{buildroot}/usr/bin/env_parallel.csh
@@ -114,6 +113,7 @@ rm -f %{buildroot}/usr/bin/env_parallel.zsh
 /usr/bin/parallel
 /usr/bin/parcat
 /usr/bin/parset
+/usr/bin/parsort
 /usr/bin/sem
 /usr/bin/sql
 
@@ -132,6 +132,7 @@ rm -f %{buildroot}/usr/bin/env_parallel.zsh
 /usr/share/man/man1/parallel.1
 /usr/share/man/man1/parcat.1
 /usr/share/man/man1/parset.1
+/usr/share/man/man1/parsort.1
 /usr/share/man/man1/sem.1
 /usr/share/man/man1/sql.1
 /usr/share/man/man7/parallel_alternatives.7
