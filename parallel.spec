@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xD1AB451688888888 (ole@tange.dk)
 #
 Name     : parallel
-Version  : 20200922
-Release  : 56
-URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20200922.tar.bz2
-Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20200922.tar.bz2
-Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20200922.tar.bz2.sig
+Version  : 20201022
+Release  : 57
+URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20201022.tar.bz2
+Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20201022.tar.bz2
+Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20201022.tar.bz2.sig
 Summary  : Shell tool for executing jobs in parallel
 Group    : Development/Tools
 License  : GPL-3.0
@@ -60,15 +60,15 @@ man components for the parallel package.
 
 
 %prep
-%setup -q -n parallel-20200922
-cd %{_builddir}/parallel-20200922
+%setup -q -n parallel-20201022
+cd %{_builddir}/parallel-20201022
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1600882671
+export SOURCE_DATE_EPOCH=1603411952
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -85,10 +85,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1600882671
+export SOURCE_DATE_EPOCH=1603411952
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/parallel
-cp %{_builddir}/parallel-20200922/COPYING %{buildroot}/usr/share/package-licenses/parallel/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/parallel-20201022/COPYING %{buildroot}/usr/share/package-licenses/parallel/8624bcdae55baeef00cd11d5dfcfa60f68710a02
 %make_install
 ## Remove excluded files
 rm -f %{buildroot}/usr/bin/env_parallel.csh
