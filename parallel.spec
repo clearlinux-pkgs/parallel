@@ -6,7 +6,7 @@
 #
 Name     : parallel
 Version  : 20201222
-Release  : 59
+Release  : 60
 URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20201222.tar.bz2
 Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20201222.tar.bz2
 Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20201222.tar.bz2.sig
@@ -68,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1608588081
+export SOURCE_DATE_EPOCH=1610045432
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -85,15 +85,18 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1608588081
+export SOURCE_DATE_EPOCH=1610045432
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/parallel
 cp %{_builddir}/parallel-20201222/COPYING %{buildroot}/usr/share/package-licenses/parallel/8624bcdae55baeef00cd11d5dfcfa60f68710a02
 %make_install
 ## Remove excluded files
+rm -f %{buildroot}/usr/bin/env_parallel.ash
 rm -f %{buildroot}/usr/bin/env_parallel.csh
+rm -f %{buildroot}/usr/bin/env_parallel.dash
 rm -f %{buildroot}/usr/bin/env_parallel.fish
 rm -f %{buildroot}/usr/bin/env_parallel.ksh
+rm -f %{buildroot}/usr/bin/env_parallel.mksh
 rm -f %{buildroot}/usr/bin/env_parallel.pdksh
 rm -f %{buildroot}/usr/bin/env_parallel.tcsh
 rm -f %{buildroot}/usr/bin/env_parallel.zsh
@@ -104,10 +107,7 @@ rm -f %{buildroot}/usr/bin/env_parallel.zsh
 %files bin
 %defattr(-,root,root,-)
 /usr/bin/env_parallel
-/usr/bin/env_parallel.ash
 /usr/bin/env_parallel.bash
-/usr/bin/env_parallel.dash
-/usr/bin/env_parallel.mksh
 /usr/bin/env_parallel.sh
 /usr/bin/niceload
 /usr/bin/parallel
