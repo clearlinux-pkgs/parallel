@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# To check the signature run:
+#   echo | gpg
+#   gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve parallel-20210622.tar.bz2.sig
+
+echo | gpg 2>/dev/null
+gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve $0
+exit $?
+
+-----BEGIN PGP SIGNATURE-----
+
+iQUHBAABCgAdFiEEzaAaQgjE90UGEH570atFFoiIiIgFAmDSD0kACgkQ0atFFoiI
+iIhX9SaePLsw4eMqX9l8kUUVMHlVzCElR7jtFWOOiTrI/8RuvfdM4sVxfIX02ggu
+51z6mDWDaDAMXjhyoYJkDyqrlKmCI8lwmzIE/eAajto9sF2y5gpeIkQfBD/Fo/Pj
+A5mZYasms8iur/h5DjU4jJ6WxQM8WgkkKSWKE98Z6St6BM09IazR2xAUAhLg3hvR
+TSWjW5WHInCvmuFU8BLz0PSgKs3JwFiuCgbijvX2sSEA1evZbPNN6soEtzrLsHxL
+EAJzusz7toU8S0noClgmIvej0Prlz/fOHg/qrMh27hOipadMykFi4RPyTsiSCoYB
+rvlbTXK1WJFFd8bXAQAgvQ/PmBXbH7WARbuZkji1MGTIp+bML+4v39aBTDvQ7vEJ
+NI+smn/01DVLK/gy0RAAnzRyW9FB+5zKes7ItRw8CMyvj/GdRCqRpOaKbT/9lckK
+gKNZzHyRXS4B8k5nyXd2b3fUToeXzVLWjMm17InH4SeAuX4N+NUULkK6jJr8XDpz
+uI+fQ7rpx5dtPmewibFxXdWXBgvGt0zfWIUjHNVx6jzsCOcOqSISPyJ9yLLNLhT0
+lFZ4MQDLJ1E48K+dgVvCePx18+DCUg4D07M9iSzaOuJXnLVYx9Mqw081yJOxrpNo
+r/H22LS6wsOHA5lk+MILJbZMAWiFRZXeoKZJQM88HoMq/zVzU9+vHSKYjYBxLJAD
+n7WiIZ4QPbKInCeIOOz554+gAardwXQUkv1zV8k8Rrz9eOCVO1E4QG8XoCXJFxcT
+ys0ZthC8rWuEr1HZpakcGOT1rBHxpclky5qJO9oLWLxhkBCtqh0UIDN7PcMI7QLO
+Blje3+r3fR+tmKRF4IaEh8X+2RJ8enP2lcYfKccpI9UtF4hx7Mp+Xt7tELuSf5x6
+R446N+zhk/sjxb6R9STXL+zMI0gpMnUE++D7LjGKcMwA5BBQujEaXF4cNkqq9QFO
++sNilWWKpoUtR2mEKn+6HlRUTTkJm6nqBgz8jMuCa0wgHHCz+7aEGfWuSlRNYBRC
+KuD90Ad3IWpIxrEYR1d5wg2Vktx0sOGqM9s68ey0/qOJkaVdjR1i4LiuWHrx67bO
++V/05AzQTolDtFdcfC4IhHUucRXRgZi2jxn+VJh8h2plBJxAHlIlgA5dRuv+p3UM
+eYMOjtqlDCHBzzbTL6BJtqqAwDWR9BMQgs8+09q9cePAosq3dDAfdNJDBWv2LYk+
+SCLbnPgyi7vEsKmQdSp4M0oKtszLyLcuAY1/Gwzq2cZ2w1qBD7Q9svwohyB4JSpL
+D8xPKzPeQWCClznPXTPm+wzB7/9hO2+3wfO/dDOKncWHarLh2t0S0WsoVbtdhAAP
+oWFcPguXFzhLyX+4rdy2W2JSRmyV0ujHaiEKpk/2gkLG/LgfFtZzC/I4A2N0Mque
+YzvQAXx1rCxgYIUK163Q4cnOtTvh0MqNfm00ykr6nP6HkUtmtYEbsLg7ThLTzrNQ
+99GDKLVZvaUx1wRhE/DDEYtYK+Kq/ktwBuGoCyrXPsa4HDYJYyYiRkjAs2XqOIoh
+Ur3PKzqyUfBnz3+yUeqKxaO3qN/J+N8a+0EAVssqxLc0qi0uYAGIGNuBAu9DASWs
+5Aoa7M/Pi6YyodS+vXxrPMuY0yeescdIWCEuGzLjJbDtNVX+cp2XTQb3
+=ZxTN
+-----END PGP SIGNATURE-----
