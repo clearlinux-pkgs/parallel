@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xD1AB451688888888 (ole@tange.dk)
 #
 Name     : parallel
-Version  : 20211222
-Release  : 72
-URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20211222.tar.bz2
-Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20211222.tar.bz2
-Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20211222.tar.bz2.sig
+Version  : 20220122
+Release  : 73
+URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20220122.tar.bz2
+Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20220122.tar.bz2
+Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20220122.tar.bz2.sig
 Summary  : Shell tool for executing jobs in parallel
 Group    : Development/Tools
 License  : CC-BY-SA-4.0 GFDL-1.3 GPL-3.0
@@ -60,15 +60,15 @@ man components for the parallel package.
 
 
 %prep
-%setup -q -n parallel-20211222
-cd %{_builddir}/parallel-20211222
+%setup -q -n parallel-20220122
+cd %{_builddir}/parallel-20220122
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1640189653
+export SOURCE_DATE_EPOCH=1643041010
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -85,12 +85,12 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1640189653
+export SOURCE_DATE_EPOCH=1643041010
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/parallel
-cp %{_builddir}/parallel-20211222/LICENSES/CC-BY-SA-4.0.txt %{buildroot}/usr/share/package-licenses/parallel/f26cccd93362d640ef2c05d1c52b5efe1620a9b2
-cp %{_builddir}/parallel-20211222/LICENSES/GFDL-1.3-or-later.txt %{buildroot}/usr/share/package-licenses/parallel/9f4b4e87b606c795e2ff126522fec25546fb335f
-cp %{_builddir}/parallel-20211222/LICENSES/GPL-3.0-or-later.txt %{buildroot}/usr/share/package-licenses/parallel/e3bdbf20d43fc066a1b40a64d57d4ae5a31f177f
+cp %{_builddir}/parallel-20220122/LICENSES/CC-BY-SA-4.0.txt %{buildroot}/usr/share/package-licenses/parallel/f26cccd93362d640ef2c05d1c52b5efe1620a9b2
+cp %{_builddir}/parallel-20220122/LICENSES/GFDL-1.3-or-later.txt %{buildroot}/usr/share/package-licenses/parallel/9f4b4e87b606c795e2ff126522fec25546fb335f
+cp %{_builddir}/parallel-20220122/LICENSES/GPL-3.0-or-later.txt %{buildroot}/usr/share/package-licenses/parallel/e3bdbf20d43fc066a1b40a64d57d4ae5a31f177f
 %make_install
 ## Remove excluded files
 rm -f %{buildroot}*/usr/bin/env_parallel.ash
