@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# To check the signature run:
+#   echo | gpg
+#   gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve parallel-20220622.tar.bz2.sig
+
+echo | gpg 2>/dev/null
+gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve $0
+exit $?
+
+-----BEGIN PGP SIGNATURE-----
+
+iQUHBAABCgAdFiEEzaAaQgjE90UGEH570atFFoiIiIgFAmKzHIsACgkQ0atFFoiI
+iIiwgiaePI4E7J4cwvFDK+oIIYg84uFi4QKOGsLYiu13wz0hhDR/qD/RS+R7Q5EE
+WrVzYHzW/ZUoDLTbOsoLtMs98VFh/Goc2qBSqUD9D9pwfYVHEtbbmdL7Y3EwDS8d
+tETwVF5ga4p6NPJw+StI4awNVnK9fbTrJ3cvvL0+4y8Xejrv7Afc80kEq07k183q
+HhXz+a1xDLkxIlXYSwF3y/bxcjpsCIPdDxevcgIlb+pqKYWC7vtHXu9N5clfpHUE
+9tH6R9U5poP7wzgk4KWSLCC989uZP4ZJH9Y9wP2HT2Uk/VLetEo+Ib5p0kjDxG6q
+uzT18piISxdfmcB1LczkN7Wjp7WVE46bSk3QLJjbCZ0ABV/IuDOBRcpcrMFlFzoy
+Jc8vaZZFsmk+dSvrzcR0AXyzw9BVRVckJKDdatEss7HnuRerh1i38KIH7+iXb8VK
+AaO66RYNLxMyM0B6ie40FGKzsUot3IwVV13gZQkI0CwT+FtsDsk+4OGoXNFa4r0e
+DIXm2CTtdHBkX6rkWLtmXE0kAtcp1HGt0VwSstwyDMbBwzKs4Dz+iZ8hr7rOecIc
+Q+3fO9tjtqx5xX/lJFK7eRIAUCl/KK4Wrb6O1hVm3E1+L/m47gjzMys/kvwcoXXv
+cFX2lAU2oFw/sej9AwcJaEGMSD6VUw+98NHl5JivoOS6OFIeyZJs7PREt4J0e07S
+UyUOpChQqVfiY+DeoRZTZc2VDTvmiAIqgHaRLzVA9zUnBfa+mkOyvw12rxL7Oog3
+z75Kj9pIcqxkUaPq3lyhlYtsTS3n4oCumafHeqlohR7r5Sj5HVjUevCeP+nIjBED
+kIM7zo276/x4xCsSCcaHQylp2JzNBpd2OCeGQavh/5hl8RVcbXmzn2uuY29MTs02
+uQ07WtAeERtC1ezc4AzOWvlFUrt/3PHcplP61n17gpkk0jlxVH2DEJHthw/GXNJ2
+1zFURKh0mBe/o8UT0vkmcZmsNO/G02Kd53x/97zZQqEVAvZkGWdsM8Dx/gdmPG3q
+N/DwlB4wmEdwv75MEXraBDxlAw0awLzYFpEHbtkYmhykXVXAsNi/ikhiU/Jta86E
+MEtSXxS9gBlF41pNKSbUKiSLhT43gYyw/T8cui3KJiVqQTYGWJmxhPtQgj25XOhi
+Zw/EQRPA2GtyVKziCoOaMOi/4GeaJA2+5B/bH7HVZpIlaDBx0xTffHt1L8WM6kg1
+/ekPMrhZKG4peN/XtOpddiKBNZtn03W66ZbhicQpEWhu6jv9rj5+/Q7eZ/LTjTVz
+7sDMpkHuM2kzvwToDSVyU36cCQOFfCkuEQ1Py2Mqm3Jb4kThm3jRtR7wecDbfUbq
+35vzdxCHT5D//4je+KNEaQZQ6u+RGQIOON5IfqddY8pnNa/1MewKlGoEZIRiH6+m
+t98COGgPuVwW7fJ+r29/SuuZk4MiU8u2dFeB8pdPNo3LDfDBJ0oAH3tHAHTw8nRq
+nnBE0aRDdp+RgVDFw6uE5Pt4oqZtl0gFdnLqKA/nrI+pwpufwbVrhizoHWqEICtm
+15EVVBXKAuonF2YjduLC0H/IwgZH7MFp0QfKDln18ms6SXVXHVcYmYRBzkL2qLf4
+ErIX3Qy507i1Q2iAKZZdJzbeCNzjX0SHRKY2lsPdzDcCo0AdsjmQQKe7
+=Xga0
+-----END PGP SIGNATURE-----

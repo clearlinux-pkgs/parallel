@@ -5,15 +5,16 @@
 # Source0 file verified with key 0xD1AB451688888888 (ole@tange.dk)
 #
 Name     : parallel
-Version  : 20220522
-Release  : 77
-URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20220522.tar.bz2
-Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20220522.tar.bz2
-Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20220522.tar.bz2.sig
+Version  : 20220722
+Release  : 78
+URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20220722.tar.bz2
+Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20220722.tar.bz2
+Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20220722.tar.bz2.sig
 Summary  : Shell tool for executing jobs in parallel
 Group    : Development/Tools
 License  : CC-BY-SA-4.0 GFDL-1.3 GPL-3.0
 Requires: parallel-bin = %{version}-%{release}
+Requires: parallel-data = %{version}-%{release}
 Requires: parallel-license = %{version}-%{release}
 Requires: parallel-man = %{version}-%{release}
 
@@ -28,10 +29,19 @@ and pipe it into commands in parallel.
 %package bin
 Summary: bin components for the parallel package.
 Group: Binaries
+Requires: parallel-data = %{version}-%{release}
 Requires: parallel-license = %{version}-%{release}
 
 %description bin
 bin components for the parallel package.
+
+
+%package data
+Summary: data components for the parallel package.
+Group: Data
+
+%description data
+data components for the parallel package.
 
 
 %package doc
@@ -60,15 +70,15 @@ man components for the parallel package.
 
 
 %prep
-%setup -q -n parallel-20220522
-cd %{_builddir}/parallel-20220522
+%setup -q -n parallel-20220722
+cd %{_builddir}/parallel-20220722
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1653333241
+export SOURCE_DATE_EPOCH=1658763357
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -85,12 +95,12 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1653333241
+export SOURCE_DATE_EPOCH=1658763357
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/parallel
-cp %{_builddir}/parallel-20220522/LICENSES/CC-BY-SA-4.0.txt %{buildroot}/usr/share/package-licenses/parallel/f26cccd93362d640ef2c05d1c52b5efe1620a9b2
-cp %{_builddir}/parallel-20220522/LICENSES/GFDL-1.3-or-later.txt %{buildroot}/usr/share/package-licenses/parallel/9f4b4e87b606c795e2ff126522fec25546fb335f
-cp %{_builddir}/parallel-20220522/LICENSES/GPL-3.0-or-later.txt %{buildroot}/usr/share/package-licenses/parallel/e3bdbf20d43fc066a1b40a64d57d4ae5a31f177f
+cp %{_builddir}/parallel-%{version}/LICENSES/CC-BY-SA-4.0.txt %{buildroot}/usr/share/package-licenses/parallel/f26cccd93362d640ef2c05d1c52b5efe1620a9b2
+cp %{_builddir}/parallel-%{version}/LICENSES/GFDL-1.3-or-later.txt %{buildroot}/usr/share/package-licenses/parallel/9f4b4e87b606c795e2ff126522fec25546fb335f
+cp %{_builddir}/parallel-%{version}/LICENSES/GPL-3.0-or-later.txt %{buildroot}/usr/share/package-licenses/parallel/e3bdbf20d43fc066a1b40a64d57d4ae5a31f177f
 %make_install
 ## Remove excluded files
 rm -f %{buildroot}*/usr/bin/env_parallel.ash
@@ -118,6 +128,11 @@ rm -f %{buildroot}*/usr/bin/env_parallel.zsh
 /usr/bin/parsort
 /usr/bin/sem
 /usr/bin/sql
+
+%files data
+%defattr(-,root,root,-)
+/usr/share/bash-completion/completions/parallel
+/usr/share/zsh/site-functions/_parallel
 
 %files doc
 %defattr(0644,root,root,0755)
