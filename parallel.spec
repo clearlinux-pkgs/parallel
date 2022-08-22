@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xD1AB451688888888 (ole@tange.dk)
 #
 Name     : parallel
-Version  : 20220722
-Release  : 78
-URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20220722.tar.bz2
-Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20220722.tar.bz2
-Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20220722.tar.bz2.sig
+Version  : 20220822
+Release  : 79
+URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20220822.tar.bz2
+Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20220822.tar.bz2
+Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20220822.tar.bz2.sig
 Summary  : Shell tool for executing jobs in parallel
 Group    : Development/Tools
 License  : CC-BY-SA-4.0 GFDL-1.3 GPL-3.0
@@ -70,15 +70,15 @@ man components for the parallel package.
 
 
 %prep
-%setup -q -n parallel-20220722
-cd %{_builddir}/parallel-20220722
+%setup -q -n parallel-20220822
+cd %{_builddir}/parallel-20220822
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1658763357
+export SOURCE_DATE_EPOCH=1661210367
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -95,7 +95,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1658763357
+export SOURCE_DATE_EPOCH=1661210367
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/parallel
 cp %{_builddir}/parallel-%{version}/LICENSES/CC-BY-SA-4.0.txt %{buildroot}/usr/share/package-licenses/parallel/f26cccd93362d640ef2c05d1c52b5efe1620a9b2
