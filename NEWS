@@ -1,20 +1,41 @@
+20221222
+
+New in this release:
+
+* --results works on more file systems (e.g. fat)
+
+* Joblog gives the same exit code as bash.
+
+News about GNU Parallel:
+
+* Programação Shell Linux: Paralelismo de processos com GNU parallel
+  https://www.youtube.com/watch?v=duheTWLIrp8
+
+* Talk Python: Data Science from the Command Line
+  https://talkpython.fm/episodes/show/392/data-science-from-the-command-line
+
+
 20221122
+
+New in this release:
 
 * Support for IPv6 adresses and _ in hostnames in --sshlogin.
 
 * Use --total-jobs for --eta/--bar if generating jobs is slow.
 
-* A lot of bug fixed in --latest-line.
+* A lot of bugs fixed in --latest-line.
 
-* Better support MSYS2.
+* Better support for MSYS2.
 
 * Better Text::CSV error messages.
 
 * --bar supports UTF8.
 
-* GNU Parallel is now on Mastodon: @GNU_Parallel@hostux.social
-
 * Bug fixes and man page updates.
+
+News about GNU Parallel:
+
+* GNU Parallel is now on Mastodon: @GNU_Parallel@hostux.social
 
 
 20221022
