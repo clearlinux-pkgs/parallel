@@ -6,11 +6,11 @@
 # Source0 file verified with key 0xD1AB451688888888 (ole@tange.dk)
 #
 Name     : parallel
-Version  : 20230422
-Release  : 87
-URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20230422.tar.bz2
-Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20230422.tar.bz2
-Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20230422.tar.bz2.sig
+Version  : 20230522
+Release  : 88
+URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20230522.tar.bz2
+Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20230522.tar.bz2
+Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20230522.tar.bz2.sig
 Summary  : Shell tool for executing jobs in parallel
 Group    : Development/Tools
 License  : CC-BY-SA-4.0 GFDL-1.3 GPL-3.0
@@ -75,37 +75,55 @@ man components for the parallel package.
 
 
 %prep
-%setup -q -n parallel-20230422
-cd %{_builddir}/parallel-20230422
+%setup -q -n parallel-20230522
+cd %{_builddir}/parallel-20230522
+pushd ..
+cp -a parallel-20230522 buildavx2
+popd
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1682270729
+export SOURCE_DATE_EPOCH=1684864290
 export GCC_IGNORE_WERROR=1
-export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 %configure --disable-static
 make  %{?_smp_mflags}
 
+unset PKG_CONFIG_PATH
+pushd ../buildavx2/
+export CFLAGS="$CFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3"
+export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3"
+export FFLAGS="$FFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3"
+export FCFLAGS="$FCFLAGS -m64 -march=x86-64-v3"
+export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3"
+%configure --disable-static
+make  %{?_smp_mflags}
+popd
 %check
 export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
+cd ../buildavx2;
+make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1682270729
+export SOURCE_DATE_EPOCH=1684864290
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/parallel
 cp %{_builddir}/parallel-%{version}/LICENSES/CC-BY-SA-4.0.txt %{buildroot}/usr/share/package-licenses/parallel/f26cccd93362d640ef2c05d1c52b5efe1620a9b2 || :
 cp %{_builddir}/parallel-%{version}/LICENSES/GFDL-1.3-or-later.txt %{buildroot}/usr/share/package-licenses/parallel/9f4b4e87b606c795e2ff126522fec25546fb335f || :
 cp %{_builddir}/parallel-%{version}/LICENSES/GPL-3.0-or-later.txt %{buildroot}/usr/share/package-licenses/parallel/e3bdbf20d43fc066a1b40a64d57d4ae5a31f177f || :
+pushd ../buildavx2/
+%make_install_v3
+popd
 %make_install
 ## Remove excluded files
 rm -f %{buildroot}*/usr/bin/env_parallel.ash
@@ -117,6 +135,7 @@ rm -f %{buildroot}*/usr/bin/env_parallel.mksh
 rm -f %{buildroot}*/usr/bin/env_parallel.pdksh
 rm -f %{buildroot}*/usr/bin/env_parallel.tcsh
 rm -f %{buildroot}*/usr/bin/env_parallel.zsh
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
