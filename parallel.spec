@@ -6,11 +6,11 @@
 # Source0 file verified with key 0xD1AB451688888888 (ole@tange.dk)
 #
 Name     : parallel
-Version  : 20230622
-Release  : 89
-URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20230622.tar.bz2
-Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20230622.tar.bz2
-Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20230622.tar.bz2.sig
+Version  : 20230722
+Release  : 90
+URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20230722.tar.bz2
+Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20230722.tar.bz2
+Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20230722.tar.bz2.sig
 Summary  : Shell tool for executing jobs in parallel
 Group    : Development/Tools
 License  : CC-BY-SA-4.0 GFDL-1.3 GPL-3.0
@@ -75,10 +75,10 @@ man components for the parallel package.
 
 
 %prep
-%setup -q -n parallel-20230622
-cd %{_builddir}/parallel-20230622
+%setup -q -n parallel-20230722
+cd %{_builddir}/parallel-20230722
 pushd ..
-cp -a parallel-20230622 buildavx2
+cp -a parallel-20230722 buildavx2
 popd
 
 %build
@@ -86,7 +86,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1687185664
+export SOURCE_DATE_EPOCH=1690209139
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -115,7 +115,7 @@ cd ../buildavx2;
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1687185664
+export SOURCE_DATE_EPOCH=1690209139
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/parallel
 cp %{_builddir}/parallel-%{version}/LICENSES/CC-BY-SA-4.0.txt %{buildroot}/usr/share/package-licenses/parallel/f26cccd93362d640ef2c05d1c52b5efe1620a9b2 || :
