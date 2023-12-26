@@ -8,11 +8,11 @@
 # Source0 file verified with key 0xD1AB451688888888 (ole@tange.dk)
 #
 Name     : parallel
-Version  : 20231122
-Release  : 95
-URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20231122.tar.bz2
-Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20231122.tar.bz2
-Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20231122.tar.bz2.sig
+Version  : 20231222
+Release  : 96
+URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20231222.tar.bz2
+Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20231222.tar.bz2
+Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20231222.tar.bz2.sig
 Summary  : Shell tool for executing jobs in parallel
 Group    : Development/Tools
 License  : CC-BY-SA-4.0 GFDL-1.3 GPL-3.0
@@ -21,7 +21,6 @@ Requires: parallel-data = %{version}-%{release}
 Requires: parallel-license = %{version}-%{release}
 Requires: parallel-man = %{version}-%{release}
 BuildRequires : buildreq-configure
-BuildRequires : perl(Getopt::Long)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -78,10 +77,10 @@ man components for the parallel package.
 
 
 %prep
-%setup -q -n parallel-20231122
-cd %{_builddir}/parallel-20231122
+%setup -q -n parallel-20231222
+cd %{_builddir}/parallel-20231222
 pushd ..
-cp -a parallel-20231122 buildavx2
+cp -a parallel-20231222 buildavx2
 popd
 
 %build
@@ -89,7 +88,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1702044062
+export SOURCE_DATE_EPOCH=1703606991
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -135,7 +134,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1702044062
+export SOURCE_DATE_EPOCH=1703606991
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/parallel
 cp %{_builddir}/parallel-%{version}/LICENSES/CC-BY-SA-4.0.txt %{buildroot}/usr/share/package-licenses/parallel/f26cccd93362d640ef2c05d1c52b5efe1620a9b2 || :
