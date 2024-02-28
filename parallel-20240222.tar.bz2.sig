@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# To check the signature run:
+#   echo | gpg
+#   gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve parallel-20240222.tar.bz2.sig
+
+echo | gpg 2>/dev/null
+gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve $0
+exit $?
+
+-----BEGIN PGP SIGNATURE-----
+
+iQUHBAABCgAdFiEEzaAaQgjE90UGEH570atFFoiIiIgFAmXegR4ACgkQ0atFFoiI
+iIiTuCagrWUooTGeOiu1ofhxkJq7NDynWPYDK3vgTU5dQDIl5nVifZeGdFSYrMey
+0Qo52KwWwyUs7fEr5Hd2jXSQElI8DGA07aF1vSHmG7zaThWkhsSbVGAivJR48DQ8
+kmE9PwacIHyhlhWtNE3msRlCaZlcQGnYXn8prcO637EtDvDpOD5GWxon4LNR1rCS
+O8oFxPJ9kW5j9QD6sJxT0KtVAEP+D2aguczijUaxk/u6WGUTMVZMIzLbUqeNzErK
+ff8/PbkcWvmM8SkVBMTiAAqza1IqUpENywJEB7HfK7i0nUsdROs5tLM/gd0xcWD/
+yvisqU1MPgdxV3Q3vLii4JnF4z0GmODPv2S4OW6numlIJeL5yO0q0ZsxXtSEC9qb
+/GqYL2WpwnEABU+on45ajPwSHj0pTQbJwIlfqtufZN3U+qgIiNqDjgDUAzvpSo9G
+HR7ZE1Huzhk0ONgRt4x8qmBnZS4g7Aom99N0fW3IERw/fPsVs/hLdfgk9FWBQb8w
+kbpOL1vWbvcjzTyOKcLNYTV2nbswUbgySH3D57O0cFQIoUGwSMs0/uhacWAbPFcT
+F1zkFLZbcBNAww0VZrm/tcmxdXDZooGSnXr8U9DmcSej/o6ggo2/7wJwdJPooIAK
+l1RMAhAp5/xHUEvm/Qkdc4Lyx/32UjUrdFg//NEk+wVyy8SpHL7FYTgc/FCaCka0
+Y0XBugDRRNXPmdTKU21Pmi2MWFTFawEQoUhvN5CH3vcVN1Y2T7i0/SNhOZgn9/9M
+qmDDfbApKmwxkWwohRtF+BCvCSwNYihL6H5xHo29Q9kn6/0+ZACOdbBG5bARRi+x
+TDEhtp1SbYworr7IvOfRsMMdrdb/Ucloe9YLUKBrgCtBdYwmn3tHDjxcn1iIl2ym
+25tCv0865XaaL1vyclyHCuJHWS5OghxbQbQaQONxgc8Eg4YftARpUzY3nbnhTVFT
+gWBhkNEbY7ggul23t7O8qBoMGQcwQrjStcZFkzBR5XNQaC2YxsgU1+w9nvmEa1ny
+VrFdUlh3vc/SzL0eTBEiQvfImuOEVpc4QlY55XYJ2OeZ6rglJu+jsOZ77hbePuBY
+LEh+JfM9pR2z2WYZmKwBivyqtuBEyaL/aFv9+FG6A4E8QO99CWK4O+RetyZq8kfz
+SoptXwfneJIMXovanlfvczy8PNAJD4VVHDr7qovnOwcICpdv63rNDhsy1+gxsgF4
+/rju97mLtcjALLbywA+VZ/tTApsZ8pdC3Nlksk8rLNRw9AyRzgvy7fqpkxHU1bYU
+1wPg2XHfn4Z2U/ZwOo168AoKxlSw1s0MuRyl3dnxKpq/JbE2HCCSd5xSFFGnLFEJ
+t8Wt92XINn94xWeSXLRXQcfuh3Z+0mZmW58ChnJA6MyeqiKbFv44svm9hr5ZFCu+
+db1947DY/4pPDXZBx+aogd/7B0cEHjyyrRnNUE1rks2myU6rQjdjbya0iqj8rYdX
+RtGyXRb5qHxWH+Tlc0w94OJgXYyvV7P/gGspUJ4gs+p9GJOskJp/50V9sMdEUOPu
+T48EZlVUX1D2WImzN/+WcynokVp3KUhMnN+VCcil3EeIGeVqtMuQDwjK79aE8ZhG
+syl4y51E7AMemfy57yX0qrpTqRKWN94QPvP7pmYPoF9HAgt7mmeYfb6G
+=6lgU
+-----END PGP SIGNATURE-----
