@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# To check the signature run:
+#   echo | gpg
+#   gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve parallel-20240922.tar.bz2.sig
+
+echo | gpg 2>/dev/null
+gpg --auto-key-locate keyserver --keyserver-options auto-key-retrieve $0
+exit $?
+
+-----BEGIN PGP SIGNATURE-----
+
+iQUHBAABCgAdFiEEzaAaQgjE90UGEH570atFFoiIiIgFAmbwXaUACgkQ0atFFoiI
+iIgzrSagtxr/GmQNCOz9f8lmx/4pREJtpCnF/ZnkYvfZ0npQCFomlVKskt+fGXK/
+nkMtE5SfazC5B3LwzCk2jqu/Qd+BFhak+NxvQ1lhl2IOuGTEqsxFWfnqOpxDOGYZ
+d2pm09mqF3PSc6TwAp39oTV2ZNNEnXY3MtX093h/116Cosv/1OePJgHMtbSgUT7z
+MktqHYQmj3QuixAPOdCwGZQjHnaiZrUmkbz7SRMgvLeOaAB+0Us4EQHq3yw1MKR+
+iNItUZ8pu+chotlrus8tHUM7Nr/OOSQGfA2S94u8VWQlKjfR+mAwHumSOrDQI6wB
+KBPiOxXUv2qub9q+fkKXKdw9pMFR/cF8EI+/zQ4nKQsQWVNNDCOgMav+t+uG73mm
+tHC6A9BMZiXfttAAqOjh65JOxK1+I6Yzt/fEb7X7jxbrikPZX9YludLUM+1WgQQF
+vsYFz++LeacOARVHaUaJyJnWnli6qpbat+uk7C4sp+l5z611qHWW3qQxz06Y+/Q3
+v1RdT7Gfpx7fOOrPZvrznFRhvlkLOI0QBI4e4YySHmZJCFkGC0SUt1tt/PLSHvxP
+/C+tuFZ8VIOTOYLQpq9lD0NaDdwD+xPdOLSn+jxzDswixlzOAYKaoQSoaGfr/pzo
+XFDapia1cZ73655MWs5I6h/tSj6D53Rp1yXKNXCrPtQuNpbiLa2Kcy/iBamAREbU
+ED3r92Yhj3HS65D/M6lTH1IMZeqhrPDPOgbZ7aYdgbs2rm+SDcJyDKSz/eBVaKqd
+n+DSErraDxOK1SsYdbXYG2kIvkRLHD2EoF1J2jIAErGpnd3Irt4/AqonUpzChhWb
+E6SjOYnVXPYWxkhRTCBXe5ap024RL9WFkifr1c0treBAYtrlyW7AKJD+n7865uzP
+Q9rjrYzjRmvxiyLxdh715fUFs1erMbOuWm7VcXM7wWTYlDbNpsa2M/9PvjBYSXsD
+pyFHSdI9SLZQgN4jpYF+YHH4EtC5Y9pYl56KL4ycsz+ddsPq85cRd8n/mEGHVr89
+u7Yu2DVuxHi53iyb1Wt/vF7sl1b5s5Y96fqseXYob7+ZonPfeXCa/oGk5zCwt1jc
+e6tqnO+tbxdku5MLEag0fhv6Tq9ibUSmKBPeCaEeNHH6Um4rm0kT5IJjSH0L58CD
+VpGold9x8LrD70h1nSX2sP6W/BOVcecbdCgkKtaywTSXsngybb4UG2heZsA/dzRM
+zUGW7gp3CqTJ+nwE/akxOZrx2QDm+kOaItSLF/J1aC+5+p8QBBwv9gy5Tbggy+YP
+GOnFGheI0IBfSpIFB6bQOUZFoFF4YOkJp05OCpp0KrVI9D8OlDu72QkWFLs+tqJ2
+uvsB7dTQ4zH3xHaxGmr6BRAvw0surnyqyHWANZIjSXJvp/p5NPWhmwdjwGFq+O4+
+6rOhtHGFkslOBxM7msSEZEPBAQOBY7bZqg+Ugm2DWc6u6tJ/dCd94fB6zjrJshyq
+xMJGf/TX9oVrGPHImJtTyPgZZYaSJSdBxvubu0pZQJFLx1/UVz15ghOMlVXzVkkh
+jzBQbiBj7je975ivb/mVdAahqNgxYh48D5P9Llx53TWs65NHAlD6Vb52gPdC3WMF
+PN7QivrJA3U/acpayg5oYZ1r5QsRD7VHUNQEhUj8ir4g13XklHzdp+R4
+=yILK
+-----END PGP SIGNATURE-----
