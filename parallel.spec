@@ -8,11 +8,11 @@
 # Source0 file verified with key 0xD1AB451688888888 (ole@tange.dk)
 #
 Name     : parallel
-Version  : 20250222
-Release  : 110
-URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20250222.tar.bz2
-Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20250222.tar.bz2
-Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20250222.tar.bz2.sig
+Version  : 20250322
+Release  : 111
+URL      : https://mirrors.kernel.org/gnu/parallel/parallel-20250322.tar.bz2
+Source0  : https://mirrors.kernel.org/gnu/parallel/parallel-20250322.tar.bz2
+Source1  : https://mirrors.kernel.org/gnu/parallel/parallel-20250322.tar.bz2.sig
 Source2  : D1AB451688888888.pkey
 Summary  : Shell tool for executing jobs in parallel
 Group    : Development/Tools
@@ -84,10 +84,10 @@ chmod 700 .gnupg
 gpg --homedir .gnupg --import %{SOURCE2}
 gpg --homedir .gnupg --status-fd 1 --verify %{SOURCE1} %{SOURCE0} > gpg.status
 grep -E '^\[GNUPG:\] (GOODSIG|EXPKEYSIG) D1AB451688888888' gpg.status
-%setup -q -n parallel-20250222
-cd %{_builddir}/parallel-20250222
+%setup -q -n parallel-20250322
+cd %{_builddir}/parallel-20250322
 pushd ..
-cp -a parallel-20250222 buildavx2
+cp -a parallel-20250322 buildavx2
 popd
 
 %build
@@ -95,7 +95,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1740410995
+export SOURCE_DATE_EPOCH=1742761549
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -143,7 +143,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1740410995
+export SOURCE_DATE_EPOCH=1742761549
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/parallel
 cp %{_builddir}/parallel-%{version}/LICENSES/CC-BY-SA-4.0.txt %{buildroot}/usr/share/package-licenses/parallel/f26cccd93362d640ef2c05d1c52b5efe1620a9b2 || :
